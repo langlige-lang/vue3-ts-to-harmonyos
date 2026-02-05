@@ -63,6 +63,12 @@ npm run build
 npm run preview
 ```
 
+### 直接打开构建文件
+
+构建完成后，可以直接在浏览器中打开 `dist/index.html` 查看生产版本。
+
+> **注意**：如果直接打开 `dist/index.html` 显示异常，请使用 `npm run preview` 或部署到 Web 服务器上查看。
+
 ## 📁 项目结构
 
 ```

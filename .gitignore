@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build output
-dist/
+# Build output (保留 dist 用于 GitHub Pages)
+# dist/
 
 # Editor directories and files
 .vscode/*

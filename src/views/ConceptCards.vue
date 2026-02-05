@@ -212,7 +212,7 @@ const flipCard = (index: number) => {
   }
 }
 
-const handleCardHover = (index: number, isHovering: boolean) => {
+const handleCardHover = (_index: number, _isHovering: boolean) => {
   // 可以添加额外的悬停效果
 }
 </script>

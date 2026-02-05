@@ -26,7 +26,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const particleCanvas = ref<HTMLCanvasElement | null>(null)
 const symbols = ['{ }', '< />', '( )', '[ ]', ';', '//', '@', '#', '*', '=>']
 
-const getSymbolStyle = (index: number) => {
+const getSymbolStyle = (_index: number) => {
   const left = Math.random() * 100
   const top = Math.random() * 100
   const delay = Math.random() * 5
