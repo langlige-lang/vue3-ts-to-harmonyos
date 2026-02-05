@@ -1,0 +1,13 @@
+# Available Tools
+
+## zoto_hoza
+
+Parameters:
+- summary (required): Put your COMPLETE response here in Markdown format (supports tables, code blocks, lists)
+- reason (optional)
+
+ALWAYS call zoto_hoza at the end of EVERY response.
+
+## Format
+
+{"tool": "zoto_hoza", "arguments": {"summary": "Your full Markdown response here"}}
