@@ -61,52 +61,64 @@
 </template>
 
 <script setup lang="ts">
-import { ref, h } from 'vue'
+import { ref } from 'vue'
 
-// 图标组件 - 使用 h() 函数
-const DecoratorIcon = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-  h('rect', { x: '4', y: '4', width: '16', height: '16', rx: '2', ry: '2' }),
-  h('rect', { x: '9', y: '9', width: '6', height: '6' }),
-  h('line', { x1: '9', y1: '1', x2: '9', y2: '4' }),
-  h('line', { x1: '15', y1: '1', x2: '15', y2: '4' }),
-  h('line', { x1: '9', y1: '20', x2: '9', y2: '23' }),
-  h('line', { x1: '15', y1: '20', x2: '15', y2: '23' }),
-  h('line', { x1: '20', y1: '9', x2: '23', y2: '9' }),
-  h('line', { x1: '20', y1: '14', x2: '23', y2: '14' }),
-  h('line', { x1: '1', y1: '9', x2: '4', y2: '9' }),
-  h('line', { x1: '1', y1: '14', x2: '4', y2: '14' })
-])
+// 图标组件
+const DecoratorIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+    <rect x="9" y="9" width="6" height="6"></rect>
+    <line x1="9" y1="1" x2="9" y2="4"></line>
+    <line x1="15" y1="1" x2="15" y2="4"></line>
+    <line x1="9" y1="20" x2="9" y2="23"></line>
+    <line x1="15" y1="20" x2="15" y2="23"></line>
+    <line x1="20" y1="9" x2="23" y2="9"></line>
+    <line x1="20" y1="14" x2="23" y2="14"></line>
+    <line x1="1" y1="9" x2="4" y2="9"></line>
+    <line x1="1" y1="14" x2="4" y2="14"></line>
+  </svg>
+)
 
-const ComponentIcon = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-  h('polygon', { points: '12 2 2 7 12 12 22 7 12 2' }),
-  h('polyline', { points: '2 17 12 22 22 17' }),
-  h('polyline', { points: '2 12 12 17 22 12' })
-])
+const ComponentIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+    <polyline points="2 17 12 22 22 17"></polyline>
+    <polyline points="2 12 12 17 22 12"></polyline>
+  </svg>
+)
 
-const StyleIcon = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-  h('circle', { cx: '12', cy: '12', r: '10' }),
-  h('circle', { cx: '12', cy: '12', r: '4' }),
-  h('line', { x1: '4.93', y1: '4.93', x2: '9.17', y2: '9.17' }),
-  h('line', { x1: '14.83', y1: '14.83', x2: '19.07', y2: '19.07' }),
-  h('line', { x1: '14.83', y1: '9.17', x2: '19.07', y2: '4.93' }),
-  h('line', { x1: '14.83', y1: '9.17', x2: '18.36', y2: '5.64' }),
-  h('line', { x1: '4.93', y1: '19.07', x2: '9.17', y2: '14.83' })
-])
+const StyleIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"></circle>
+    <circle cx="12" cy="12" r="4"></circle>
+    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+    <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+  </svg>
+)
 
-const AnimationIcon = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-  h('polygon', { points: '13 2 3 14 12 14 11 22 21 10 12 10 13 2' })
-])
+const AnimationIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+  </svg>
+)
 
-const RouteIcon = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-  h('circle', { cx: '12', cy: '12', r: '10' }),
-  h('polygon', { points: '16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76' })
-])
+const RouteIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+  </svg>
+)
 
-const StorageIcon = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
-  h('ellipse', { cx: '12', cy: '5', rx: '9', ry: '3' }),
-  h('path', { d: 'M21 12c0 1.66-4 3-9 3s-9-1.34-9-3' }),
-  h('path', { d: 'M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5' })
-])
+const StorageIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+  </svg>
+)
 
 const cheatSections = [
   {

@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const vueWidth = ref(50)
 const divider = ref<HTMLElement | null>(null)
@@ -253,7 +253,7 @@ const features = [
   '双向绑定'
 ]
 
-const startDrag = (_e: MouseEvent) => {
+const startDrag = (e: MouseEvent) => {
   isDragging.value = true
   document.addEventListener('mousemove', handleDrag)
   document.addEventListener('mouseup', stopDrag)
